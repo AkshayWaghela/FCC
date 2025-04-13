@@ -32,27 +32,6 @@ The dataset is obtained from FreeCodeCamp and includes the following features:
    - The model is validated on a test set, and predictions are compared with actual values.
    - MAE is computed on both the log-transformed and original scale.
 
-## Installation & Setup
-To run this project, follow these steps:
-
-### **1. Clone the repository**
-```bash
-git clone https://github.com/your-username/health-insurance-prediction.git
-cd health-insurance-prediction
-```
-
-### **2. Install dependencies**
-Ensure you have Python 3.x installed. Then, install the required libraries:
-```bash
-pip install -r requirements.txt
-```
-
-### **3. Run the script**
-Execute the following command:
-```bash
-python insurance_cost_prediction.py
-```
-
 ## Model Performance
 - The model aims to achieve a **Mean Absolute Error (MAE) < 3500** on the original scale of expenses.
 - A scatter plot of **True vs. Predicted Expenses** is generated to visualize the performance.
@@ -135,7 +114,6 @@ The dataset was sourced from [FreeCodeCamp](https://cdn.freecodecamp.org/project
 - `README.md` - This documentation file.
 - `data/` - Contains the dataset files.
 - `notebooks/` - Jupyter notebooks with data exploration and model training.
-- `plots/` - Visualizations generated from the analysis.
 
 ## Conclusion
 This project successfully implements a content-based book recommendation system using KNN and cosine similarity. It allows users to find similar books based on user ratings.
