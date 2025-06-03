@@ -1,5 +1,75 @@
 # FCC
 
+# 🤖 Rock-Paper-Scissors AI Strategy Explorer
+
+Welcome to the **Rock-Paper-Scissors AI Strategy Explorer** — a project built as part of the [freeCodeCamp Machine Learning with Python Certification](https://www.freecodecamp.org/learn/machine-learning-with-python/) curriculum.
+
+This notebook explores different bot strategies for playing Rock-Paper-Scissors (RPS) and evaluates them through simulation. The highlight of the project is a custom **Markov Chain-based AI** that predicts opponent moves and aims to consistently achieve a **60%+ win rate**.
+
+---
+
+## 📌 Project Goals
+
+- ✅ Implement and simulate various Rock-Paper-Scissors bot strategies.
+- ✅ Build a custom AI using a 6-length Markov Chain model.
+- ✅ Evaluate and compare bot performance over multiple simulations.
+- ✅ Visualize win rates, move frequencies, and win/loss streaks.
+- ✅ Create an interactive dashboard for bot matchups.
+
+---
+
+## 🧠 Strategies Implemented
+
+| Bot Name | Strategy Description |
+|----------|-----------------------|
+| **Quincy**  | Cycles through fixed moves (`R`, `R`, `P`, `P`, `S`) |
+| **Mrugesh** | Tracks most frequent opponent move in the last 10 rounds |
+| **Kris**    | Reacts to opponent’s last move |
+| **Abbey**   | Predicts next move based on 2-length move sequence patterns |
+| **Random**  | Chooses moves uniformly at random |
+| **My Bot**  | 6-length Markov Chain prediction model |
+
+---
+
+## 📈 Performance Evaluation
+
+The AI was tested against each opponent over multiple 1000-round games. Metrics include:
+
+- **Win Rate (%)**
+- **95% Confidence Intervals** for repeated simulations
+- **Move Frequency Distributions**
+- **Win/Loss Streak Distributions**
+
+Visualizations are created using `matplotlib` and `seaborn`.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+- NumPy, pandas, SciPy
+- Matplotlib, Seaborn
+- ipywidgets (for interactivity)
+- Jupyter Notebook
+
+---
+
+## 📊 Sample Result
+
+<img src="images/win_rate_plot.png" alt="Win rate bar chart" width="600"/>
+
+> Example plot: My Bot consistently beats other bots with a >60% win rate.
+
+---
+
+## 🧪 How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/rps-ai-strategy-explorer.git
+   cd rps-ai-strategy-explorer
+
+
 
 # Health Insurance Cost Prediction
 
