@@ -71,6 +71,37 @@ Visualizations are created using `matplotlib` and `seaborn`.
 
 
 
+
+# Cats vs Dogs Image Classification with TensorFlow
+
+This project trains a convolutional neural network (CNN) to classify images of cats and dogs using TensorFlow and Keras. The model is trained on a labeled dataset with data augmentation, validated, and tested on an unknown test set.
+
+## Project Overview
+
+- Download and extract the cats and dogs dataset.
+- Preprocess images with data augmentation on the training set.
+- Build a CNN model for binary classification (cats vs dogs).
+- Train the model with early stopping based on validation accuracy.
+- Visualize training/validation accuracy and loss.
+- Predict labels on a separate test dataset.
+- Evaluate model performance with a pass threshold of 63%.
+
+## Setup and Installation
+
+This project requires Python 3.x and the following packages:
+
+- tensorflow (version 2.x)
+- numpy
+- matplotlib
+- wget (or use alternative file download)
+- unzip (command-line tool or equivalent)
+
+You can install the necessary Python packages using pip:
+
+```bash
+pip install tensorflow numpy matplotlib wget
+
+
 # Health Insurance Cost Prediction
 
 ## Overview
