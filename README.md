@@ -1,5 +1,15 @@
 # FCC
 
+## 📚 Project Index
+
+1. [Rock-Paper-Scissors AI Strategy Explorer](#1-rock-paper-scissors-ai-strategy-explorer)  
+2. [Cats vs Dogs Image Classification](#2-cats-vs-dogs-image-classification)  
+3. [Health Insurance Cost Prediction](#3-health-insurance-cost-prediction)  
+4. [Book Recommendation System](#4-book-recommendation-system)  
+5. [Your Fifth Project Title Here](#5-your-fifth-project-title-here)
+
+---
+
 # 🤖 Rock-Paper-Scissors AI Strategy Explorer
 
 Welcome to the **Rock-Paper-Scissors AI Strategy Explorer** — a project built as part of the [freeCodeCamp Machine Learning with Python Certification](https://www.freecodecamp.org/learn/machine-learning-with-python/) curriculum.
