@@ -1,239 +1,119 @@
-# FCC
+# 👨‍💻 freeCodeCamp Machine Learning & Data Science Projects
 
-## 📚 Project Index
-
-1. [Rock-Paper-Scissors AI Strategy Explorer](#1-rock-paper-scissors-ai-strategy-explorer)  
-2. [Cats vs Dogs Image Classification](#2-cats-vs-dogs-image-classification)  
-3. [Health Insurance Cost Prediction](#3-health-insurance-cost-prediction)  
-4. [Book Recommendation System](#4-book-recommendation-system)  
-5. [Your Fifth Project Title Here](#5-your-fifth-project-title-here)
+This repository contains a curated collection of machine learning and data science projects completed as part of the [freeCodeCamp Certification Programs](https://www.freecodecamp.org/learn/). Each project demonstrates practical applications of core ML/DL concepts, data preprocessing, model evaluation, and visualization using Python and its scientific libraries.
 
 ---
 
-# 🤖 Rock-Paper-Scissors AI Strategy Explorer
+## 🤖 Rock-Paper-Scissors AI Strategy Explorer
 
-Welcome to the **Rock-Paper-Scissors AI Strategy Explorer** — a project built as part of the [freeCodeCamp Machine Learning with Python Certification](https://www.freecodecamp.org/learn/machine-learning-with-python/) curriculum.
+An AI-powered simulator that evaluates different strategies for playing Rock-Paper-Scissors (RPS). The highlight is a **Markov Chain-based AI** capable of predicting opponent moves and achieving a consistent win rate of over 60%.
 
-This notebook explores different bot strategies for playing Rock-Paper-Scissors (RPS) and evaluates them through simulation. The highlight of the project is a custom **Markov Chain-based AI** that predicts opponent moves and aims to consistently achieve a **60%+ win rate**.
+**📌 Key Features:**
 
----
+* Simulates and compares 6 bot strategies, including a custom Markov Chain AI.
+* Visualizes win rates, move distributions, and streaks using `matplotlib` and `seaborn`.
+* Interactive dashboard using `ipywidgets` for head-to-head bot analysis.
 
-## 📌 Project Goals
+**🚀 Technologies:** Python, NumPy, pandas, Matplotlib, Seaborn, ipywidgets
 
-- ✅ Implement and simulate various Rock-Paper-Scissors bot strategies.
-- ✅ Build a custom AI using a 6-length Markov Chain model.
-- ✅ Evaluate and compare bot performance over multiple simulations.
-- ✅ Visualize win rates, move frequencies, and win/loss streaks.
-- ✅ Create an interactive dashboard for bot matchups.
-
----
-
-## 🧠 Strategies Implemented
-
-| Bot Name | Strategy Description |
-|----------|-----------------------|
-| **Quincy**  | Cycles through fixed moves (`R`, `R`, `P`, `P`, `S`) |
-| **Mrugesh** | Tracks most frequent opponent move in the last 10 rounds |
-| **Kris**    | Reacts to opponent’s last move |
-| **Abbey**   | Predicts next move based on 2-length move sequence patterns |
-| **Random**  | Chooses moves uniformly at random |
-| **My Bot**  | 6-length Markov Chain prediction model |
+**📊 Sample Output:**
+![Win rate plot](images/win_rate_plot.png)
 
 ---
 
-## 📈 Performance Evaluation
+## 🐱🐶 Cats vs Dogs Image Classification (TensorFlow)
 
-The AI was tested against each opponent over multiple 1000-round games. Metrics include:
+A binary image classification project using a Convolutional Neural Network (CNN) to distinguish between images of cats and dogs.
 
-- **Win Rate (%)**
-- **95% Confidence Intervals** for repeated simulations
-- **Move Frequency Distributions**
-- **Win/Loss Streak Distributions**
+**📌 Highlights:**
 
-Visualizations are created using `matplotlib` and `seaborn`.
+* Utilizes data augmentation to improve generalization.
+* Implements early stopping and validation monitoring.
+* Achieves >63% accuracy on a held-out test set.
 
----
+**🛠 Tools Used:** TensorFlow, Keras, NumPy, Matplotlib
 
-## 🛠️ Technologies Used
-
-- Python 3
-- NumPy, pandas, SciPy
-- Matplotlib, Seaborn
-- ipywidgets (for interactivity)
-- Jupyter Notebook
+**📈 Core Concepts:** CNNs, binary classification, data augmentation, early stopping
 
 ---
 
-## 📊 Sample Result
+## 🏥 Health Insurance Cost Prediction
 
-<img src="images/win_rate_plot.png" alt="Win rate bar chart" width="600"/>
+A regression project that predicts individual medical expenses based on personal attributes such as age, BMI, smoking status, and region.
 
-> Example plot: My Bot consistently beats other bots with a >60% win rate.
+**🔍 Workflow:**
 
----
+* Preprocesses data with one-hot encoding and log transformation.
+* Trains a feedforward neural network with dropout and batch normalization.
+* Evaluates performance using **Mean Absolute Error (MAE)**.
 
-## 🧪 How to Run
+**🎯 Goal:** Achieve MAE < 3500 on original expense scale.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/rps-ai-strategy-explorer.git
-   cd rps-ai-strategy-explorer
+**📉 Visuals:**
 
+* Scatter plot of predicted vs. true expenses.
+* Histogram of expense predictions.
 
-
-
-# Cats vs Dogs Image Classification with TensorFlow
-
-This project trains a convolutional neural network (CNN) to classify images of cats and dogs using TensorFlow and Keras. The model is trained on a labeled dataset with data augmentation, validated, and tested on an unknown test set.
-
-## Project Overview
-
-- Download and extract the cats and dogs dataset.
-- Preprocess images with data augmentation on the training set.
-- Build a CNN model for binary classification (cats vs dogs).
-- Train the model with early stopping based on validation accuracy.
-- Visualize training/validation accuracy and loss.
-- Predict labels on a separate test dataset.
-- Evaluate model performance with a pass threshold of 63%.
-
-## Setup and Installation
-
-This project requires Python 3.x and the following packages:
-
-- tensorflow (version 2.x)
-- numpy
-- matplotlib
-- wget (or use alternative file download)
-- unzip (command-line tool or equivalent)
-
-You can install the necessary Python packages using pip:
-
-```bash
-pip install tensorflow numpy matplotlib wget
-
-
-# Health Insurance Cost Prediction
-
-## Overview
-This project is part of the FreeCodeCamp (FCC) course submission. It builds a deep learning model using TensorFlow and Keras to predict medical expenses based on various demographic and health-related factors. The dataset used comes from an insurance dataset containing features such as age, BMI, number of children, smoking status, and region.
-
-## Dataset
-The dataset is obtained from FreeCodeCamp and includes the following features:
-- **age**: Age of the individual
-- **sex**: Gender of the individual
-- **bmi**: Body Mass Index (BMI)
-- **children**: Number of children/dependents
-- **smoker**: Whether the individual is a smoker or not
-- **region**: Residential region
-- **expenses**: Medical expenses (target variable)
-
-## Project Workflow
-1. **Data Preprocessing**:
-   - One-hot encoding of categorical features.
-   - Standard scaling of numerical features.
-   - Log transformation of the target variable (`expenses`).
-   
-2. **Model Development**:
-   - A feedforward neural network is implemented with three dense layers using ReLU activation.
-   - Batch normalization and dropout layers are used for stability and overfitting prevention.
-   - The model is compiled with the Adam optimizer and Mean Absolute Error (MAE) loss function.
-
-3. **Training and Evaluation**:
-   - Training is performed with early stopping and learning rate scheduling.
-   - The model is validated on a test set, and predictions are compared with actual values.
-   - MAE is computed on both the log-transformed and original scale.
-
-## Model Performance
-- The model aims to achieve a **Mean Absolute Error (MAE) < 3500** on the original scale of expenses.
-- A scatter plot of **True vs. Predicted Expenses** is generated to visualize the performance.
-
-## Results & Visualization
-- The model outputs a histogram of predicted expenses.
-- A scatter plot of actual vs. predicted values helps in understanding prediction accuracy.
-- The final MAE is printed to determine if the challenge is passed.
-
-## Potential Improvements
-- **Feature Engineering**: Adding interaction terms or polynomial features.
-- **Hyperparameter Tuning**: Adjusting learning rates, batch size, and number of neurons.
-- **Alternative Models**: Exploring Random Forests, Gradient Boosting, or other deep learning architectures.
-
-## Contributing
-This project is part of the FreeCodeCamp (FCC) course submission. Contributions are welcome for learning purposes.
-
-## License
-This project is licensed under the MIT License.
+**📦 Tech Stack:** TensorFlow, pandas, Scikit-learn
 
 ---
 
-### **Author**
-- **Akshay Waghela**
+## 📚 Book Recommendation System (KNN with Cosine Similarity)
 
+A content-based recommendation system that suggests similar books based on user ratings using the Book-Crossings dataset.
 
+**🔧 Features:**
 
-# Book Recommendation System
+* Filters active users and frequently rated books.
+* Builds a pivot matrix for user-item ratings.
+* Implements a KNN model with cosine similarity to recommend similar titles.
 
-## Overview
-This project builds a book recommendation system using the Book-Crossings dataset. The system leverages user ratings and a k-nearest neighbors (KNN) algorithm to suggest books similar to a given title based on cosine similarity.
+**🧠 Concepts:** Recommender systems, collaborative filtering, cosine similarity
 
-This project is part of the **FreeCodeCamp (FCC) Data Science Course**.
+**🧰 Tools:** scikit-learn, pandas, seaborn, plotly
 
-## Dataset
-The dataset consists of two CSV files:
-1. **BX-Books.csv** - Contains book details such as ISBN, title, and author.
-2. **BX-Book-Ratings.csv** - Contains user ratings for books.
+---
 
-The dataset was sourced from [FreeCodeCamp](https://cdn.freecodecamp.org/project-data/books/book-crossings.zip).
+## 🧠 Skills Demonstrated
 
-## Installation and Setup
-1. Download and extract the dataset:
-    ```bash
-    !wget https://cdn.freecodecamp.org/project-data/books/book-crossings.zip
-    !unzip book-crossings.zip
-    ```
-2. Install required Python libraries:
-    ```bash
-    pip install numpy pandas matplotlib seaborn plotly scikit-learn
-    ```
+* Machine Learning & Deep Learning
+* Data Preprocessing & Feature Engineering
+* Exploratory Data Analysis (EDA)
+* Model Evaluation & Optimization
+* Data Visualization
+* Recommendation Systems
+* Markov Models & Time Series Prediction
 
-## Data Processing
-- Loaded data using `pandas`.
-- Handled missing values and cleaned the dataset.
-- Filtered users who have rated more than 200 books.
-- Filtered books that have more than 100 ratings.
-- Created a pivot table where rows represent books, columns represent users, and values represent ratings.
+---
 
-## Exploratory Data Analysis
-- Checked for missing values.
-- Analyzed distribution of ratings.
-- Visualized user rating counts.
+## 📂 Repository Structure
 
-## Model Implementation
-- Used the `NearestNeighbors` model from `sklearn` with the cosine similarity metric.
-- Trained the model on the user-item matrix.
-- Implemented a recommendation function to find the top 5 most similar books to a given title.
+```
+📁 rps-ai-strategy-explorer/
+📁 cats-vs-dogs-cnn/
+📁 health-insurance-predictor/
+📁 book-recommender-knn/
+```
 
-## Features
-- **Book Similarity Search**: Find books similar to a given title.
-- **Data Filtering**: Consider only frequently rated books and active users.
-- **Visualization**: Show rating distributions and book similarities.
+Each directory includes:
 
-## Example Usage
-- Retrieve book recommendations based on a given title.
-- Visualize books with the most and least similarity.
+* 📓 Jupyter notebooks
+* 📊 Visualizations
+* 🧪 Evaluation metrics
+* 📁 Datasets or download scripts
+* 📄 README with instructions
 
-## Repository Structure
-- `README.md` - This documentation file.
-- `data/` - Contains the dataset files.
-- `notebooks/` - Jupyter notebooks with data exploration and model training.
+---
 
-## Conclusion
-This project successfully implements a content-based book recommendation system using KNN and cosine similarity. It allows users to find similar books based on user ratings.
+## 📃 License
 
-## References
-- [FreeCodeCamp Book-Crossings Dataset](https://cdn.freecodecamp.org/project-data/books/book-crossings.zip)
-- [Scikit-learn NearestNeighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-- [Seaborn Documentation](https://seaborn.pydata.org/)
-- [Plotly Documentation](https://plotly.com/python/)
+Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## 👤 Author
+
+**Akshay Waghela**
+*Data Science & Machine Learning Enthusiast*
+[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile) • [Portfolio](https://yourportfolio.com)
 
