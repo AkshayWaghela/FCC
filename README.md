@@ -1,69 +1,119 @@
-# FCC
-# Book Recommendation System
+# 👨‍💻 freeCodeCamp Machine Learning & Data Science Projects
 
-## Overview
-This project builds a book recommendation system using the Book-Crossings dataset. The system leverages user ratings and a k-nearest neighbors (KNN) algorithm to suggest books similar to a given title based on cosine similarity.
+This repository contains a curated collection of machine learning and data science projects completed as part of the [freeCodeCamp Certification Programs](https://www.freecodecamp.org/learn/). Each project demonstrates practical applications of core ML/DL concepts, data preprocessing, model evaluation, and visualization using Python and its scientific libraries.
 
-This project is part of the **FreeCodeCamp (FCC) Data Science Course**.
+---
 
-## Dataset
-The dataset consists of two CSV files:
-1. **BX-Books.csv** - Contains book details such as ISBN, title, and author.
-2. **BX-Book-Ratings.csv** - Contains user ratings for books.
+## 🤖 Rock-Paper-Scissors AI Strategy Explorer
 
-The dataset was sourced from [FreeCodeCamp](https://cdn.freecodecamp.org/project-data/books/book-crossings.zip).
+An AI-powered simulator that evaluates different strategies for playing Rock-Paper-Scissors (RPS). The highlight is a **Markov Chain-based AI** capable of predicting opponent moves and achieving a consistent win rate of over 60%.
 
-## Installation and Setup
-1. Download and extract the dataset:
-    ```bash
-    !wget https://cdn.freecodecamp.org/project-data/books/book-crossings.zip
-    !unzip book-crossings.zip
-    ```
-2. Install required Python libraries:
-    ```bash
-    pip install numpy pandas matplotlib seaborn plotly scikit-learn
-    ```
+**📌 Key Features:**
 
-## Data Processing
-- Loaded data using `pandas`.
-- Handled missing values and cleaned the dataset.
-- Filtered users who have rated more than 200 books.
-- Filtered books that have more than 100 ratings.
-- Created a pivot table where rows represent books, columns represent users, and values represent ratings.
+* Simulates and compares 6 bot strategies, including a custom Markov Chain AI.
+* Visualizes win rates, move distributions, and streaks using `matplotlib` and `seaborn`.
+* Interactive dashboard using `ipywidgets` for head-to-head bot analysis.
 
-## Exploratory Data Analysis
-- Checked for missing values.
-- Analyzed distribution of ratings.
-- Visualized user rating counts.
+**🚀 Technologies:** Python, NumPy, pandas, Matplotlib, Seaborn, ipywidgets
 
-## Model Implementation
-- Used the `NearestNeighbors` model from `sklearn` with the cosine similarity metric.
-- Trained the model on the user-item matrix.
-- Implemented a recommendation function to find the top 5 most similar books to a given title.
+**📊 Sample Output:**
+![Win rate plot](images/win_rate_plot.png)
 
-## Features
-- **Book Similarity Search**: Find books similar to a given title.
-- **Data Filtering**: Consider only frequently rated books and active users.
-- **Visualization**: Show rating distributions and book similarities.
+---
 
-## Example Usage
-- Retrieve book recommendations based on a given title.
-- Visualize books with the most and least similarity.
+## 🐱🐶 Cats vs Dogs Image Classification (TensorFlow)
 
-## Repository Structure
-- `README.md` - This documentation file.
-- `data/` - Contains the dataset files.
-- `notebooks/` - Jupyter notebooks with data exploration and model training.
-- `plots/` - Visualizations generated from the analysis.
+A binary image classification project using a Convolutional Neural Network (CNN) to distinguish between images of cats and dogs.
 
-## Conclusion
-This project successfully implements a content-based book recommendation system using KNN and cosine similarity. It allows users to find similar books based on user ratings.
+**📌 Highlights:**
 
-## References
-- [FreeCodeCamp Book-Crossings Dataset](https://cdn.freecodecamp.org/project-data/books/book-crossings.zip)
-- [Scikit-learn NearestNeighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-- [Seaborn Documentation](https://seaborn.pydata.org/)
-- [Plotly Documentation](https://plotly.com/python/)
+* Utilizes data augmentation to improve generalization.
+* Implements early stopping and validation monitoring.
+* Achieves >63% accuracy on a held-out test set.
+
+**🛠 Tools Used:** TensorFlow, Keras, NumPy, Matplotlib
+
+**📈 Core Concepts:** CNNs, binary classification, data augmentation, early stopping
+
+---
+
+## 🏥 Health Insurance Cost Prediction
+
+A regression project that predicts individual medical expenses based on personal attributes such as age, BMI, smoking status, and region.
+
+**🔍 Workflow:**
+
+* Preprocesses data with one-hot encoding and log transformation.
+* Trains a feedforward neural network with dropout and batch normalization.
+* Evaluates performance using **Mean Absolute Error (MAE)**.
+
+**🎯 Goal:** Achieve MAE < 3500 on original expense scale.
+
+**📉 Visuals:**
+
+* Scatter plot of predicted vs. true expenses.
+* Histogram of expense predictions.
+
+**📦 Tech Stack:** TensorFlow, pandas, Scikit-learn
+
+---
+
+## 📚 Book Recommendation System (KNN with Cosine Similarity)
+
+A content-based recommendation system that suggests similar books based on user ratings using the Book-Crossings dataset.
+
+**🔧 Features:**
+
+* Filters active users and frequently rated books.
+* Builds a pivot matrix for user-item ratings.
+* Implements a KNN model with cosine similarity to recommend similar titles.
+
+**🧠 Concepts:** Recommender systems, collaborative filtering, cosine similarity
+
+**🧰 Tools:** scikit-learn, pandas, seaborn, plotly
+
+---
+
+## 🧠 Skills Demonstrated
+
+* Machine Learning & Deep Learning
+* Data Preprocessing & Feature Engineering
+* Exploratory Data Analysis (EDA)
+* Model Evaluation & Optimization
+* Data Visualization
+* Recommendation Systems
+* Markov Models & Time Series Prediction
+
+---
+
+## 📂 Repository Structure
+
+```
+📁 rps-ai-strategy-explorer/
+📁 cats-vs-dogs-cnn/
+📁 health-insurance-predictor/
+📁 book-recommender-knn/
+```
+
+Each directory includes:
+
+* 📓 Jupyter notebooks
+* 📊 Visualizations
+* 🧪 Evaluation metrics
+* 📁 Datasets or download scripts
+* 📄 README with instructions
+
+---
+
+## 📃 License
+
+Licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## 👤 Author
+
+**Akshay Waghela**
+*Data Science & Machine Learning Enthusiast*
+[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile) • [Portfolio](https://yourportfolio.com)
 
